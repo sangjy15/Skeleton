@@ -1,38 +1,31 @@
+
 <template>
-    <Suspense>
-      <template #default>
-        <ProfileCard />
-      </template>
-      <template #fallback>
-        <ProfileCardSkeleton />
-      </template>
-    </Suspense>
+  <main>
+    <UserCard />
+    <UserCardSkeleton />
+  </main>
 </template>
 
-<script>
-import ProfileCard from './components/ProfileCard.vue'
-import ProfileCardSkeleton from './components/ProfileCardSkeleton.vue'
-
-export default {
-  name: 'App',
-  components: {
-    ProfileCard,
-    ProfileCardSkeleton
-  }
-}
+<script setup>
+import UserCard from './components/UserCard.vue'
+import UserCardSkeleton from './components/UserCardSkeleton.vue'
 </script>
-
 <style>
-html,
-body {
-  background-color: #eee;
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Mouse Memoirs", sans-serif;
 }
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+main {
+  max-width: 620;
+  margin: 0 auto;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 </style>

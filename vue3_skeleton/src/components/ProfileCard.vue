@@ -1,7 +1,7 @@
 <template>
     <div class="profile-card">
         <div class="profile-image" >
-            <img :src="userData.pic"/>
+            <img src="../assets/profile.jpg"/>
         </div>
         <div class="profile-info">
             <span>Written By</span>
@@ -42,7 +42,7 @@ export default {
     min-height: 180px;
     background: white;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 20px;
